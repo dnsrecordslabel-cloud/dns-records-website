@@ -147,15 +147,39 @@ DNS Records Official is an Indian Devotional Music Label presenting Original Bha
 <h2 style="color:#5a0f0f;margin-bottom:30px;">
 Divine Gallery
 </h2>
-<marquee scrollamount="6">
+<div style="text-align:center;">
 
-<img src="File1.jpg" style="height:250px;border-radius:12px;margin:10px;">
-<img src="File2.jpg" style="height:250px;border-radius:12px;margin:10px;">
-<img src="File3.jpg" style="height:250px;border-radius:12px;margin:10px;">
-<img src="File4.jpg" style="height:250px;border-radius:12px;margin:10px;">
-<img src="File5.jpg" style="height:250px;border-radius:12px;margin:10px;">
+<img id="gallerySlider"
+src="File1.jpg"
+style="width:90%;max-width:900px;border-radius:20px;box-shadow:0 0 20px rgba(0,0,0,0.2);">
 
-</marquee>
+</div>
+
+<script>
+
+const images = [
+"File1.jpg",
+"File2.jpg",
+"File3.jpg",
+"File4.jpg",
+"File5.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+
+current++;
+
+if(current >= images.length){
+current = 0;
+}
+
+document.getElementById("gallerySlider").src = images[current];
+
+}, 3000);
+
+</script>
 
 </section>
 <footer>
